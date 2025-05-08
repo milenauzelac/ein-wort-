@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Einzelwort – Suisse BP Int'l</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: "Suisse BP Int'l", Helvetica, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #wort {
+      font-size: 6em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<div id="wort">WORT</div>
+
+<script>
+const woerter = [
+  "AKTION", "AKT", "BANK", "BIOTIN", "BISS", "BOOT", "CANVAS",
+  "CASANOVA", "CASINO", "IKON", "INSTINKT", "KANON", "KINO",
+  "KIOSK", "KITA", "KNAST", "KONTAKT", "KOST", "NANO", "NATION",
+  "NIKOTIN", "OKTAV", "SOS", "STAB", "STATION", "STOCK",
+  "TABAK", "TAKTIK", "TAT", "TOAST", "VATIKAN"
+];
+
+const wortElement = document.getElementById("wort");
+
+function neuesWort() {
+  const zufallswort = woerter[Math.floor(Math.random() * woerter.length)];
+  wortElement.textContent = zufallswort;
+}
+
+neuesWort();
+setInterval(neuesWort, 1000);
+</script>
+
+</body>
+</html>
